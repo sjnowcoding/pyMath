@@ -24,8 +24,8 @@ def drawBaseLine():
      #기준선 그리기 
     pygame.draw.line(screen,BLACK, (0,hh),(size[0],hh),1)
     pygame.draw.line(screen,BLACK, (hw,0),(hw,size[1]),1)
-    screen.blit(penX,(580,200))
-    screen.blit(penY,(300,10))
+    screen.blit(penX,(580,hh))
+    screen.blit(penY,(hw,10))
     
 
 

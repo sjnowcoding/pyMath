@@ -1,0 +1,36 @@
+
+def andNeuron(x1, x2):
+    w1,w2=.4, .4
+    limit = .7
+
+    if(x1*w1+x2*w2 > limit):
+        return 1
+    else:
+        return 0
+
+def orNeuron(x1, x2):
+    w1,w2=.4, .4
+    limit = .3
+
+    if(x1*w1+x2*w2 > limit):
+        return 1
+    else:
+        return 0
+
+
+
+def nandNeuron(x1, x2):
+    w1,w2=-.4, -.4
+    limit = -.6
+
+    if(x1*w1+x2*w2 > limit):
+        return 1
+    else:
+        return 0
+
+print( nandNeuron(0,0) )
+print( nandNeuron(1,0) )
+print( nandNeuron(0,1) )
+print( nandNeuron(1,1) )
+
+

@@ -1,0 +1,23 @@
+import numpy as np
+
+def andNeuron(X):
+    m = np.array([
+        [1,1, -1.2],
+        [0,0, 0   ]
+        ])
+
+    r=np.dot(m,X)
+
+    return r
+
+t = np.array( [
+    [0],
+    [0],
+    [1]
+    ])
+
+print(andNeuron(t))
+
+
+
+    

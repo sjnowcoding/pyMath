@@ -1,0 +1,45 @@
+import numpy as np
+
+def changeValue(R):
+    #하나씩 꺼내서 0보다 크면 1 아니면 0
+    for i in range( len(R)):
+        for j in range(len(R[i])):
+            if(R[i][j]>0):
+                R[i][j]=1
+            else:
+                R[i][j]=0
+    return R
+
+def xorNeuron(X):
+    m1 = np.array([
+        [-1,-1, 1.2],
+        [1,1, -0.8],
+        [0,0,   1]
+        ])
+    r=np.dot(m1,X)
+    r = changeValue(r)
+    
+
+    m2 = np.array([
+        [1, 1, -1.2],
+        
+        ])
+    r = np.dot(m2,r)
+    r = changeValue(r)
+    print(r)
+
+
+t = np.array( [
+    [0,1,0,1],
+    [0,0,1,1],
+    [1,1,1,1]
+    ])
+
+xorNeuron(t)
+
+
+    
+
+
+
+    
